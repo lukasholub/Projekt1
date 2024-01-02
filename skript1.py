@@ -1,4 +1,2 @@
-print("Mám se fajn, je mi skvěle")
-
-for i in "Python":
+for i in "Alaa Mrad":
     print(i)
