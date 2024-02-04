@@ -60,10 +60,9 @@ print(f"We have {number_of_texts} texts to be analyzed")
 print(separator)
 
 #choosing the text by integer input
-input_choosing_text = int(input("Enter a number between 1 and 3 to select: "))
+input_choosing_text = int(input(f"Enter a number between 1 and {len(TEXTS)} to select: ")) - 1
 
 #making sure the entered number logically corresponds to the list
-input_choosing_text -= 1
 
 #creating a list for all the words we work with
 clean_words = []
