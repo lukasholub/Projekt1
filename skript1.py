@@ -35,8 +35,10 @@ in modern oceans. Other fish such as paddlefish,
 garpike and stingray are also present.'''
 ]
 separator = "-" * 60
+
 #variable so that the number of texts can be any number
 number_of_texts = len(TEXTS)
+
 #dictionary with registered users
 registered_users = {
     'bob': '123',
@@ -46,6 +48,7 @@ registered_users = {
 }
 input_username = input("Enter your username: ")
 input_password = input("Enter your password: ")
+
 #searching within the login credentials dictionary
 if input_username in registered_users and registered_users[input_username] == input_password:
     print(separator)
@@ -55,8 +58,10 @@ else:
     sys.exit()
 print(f"We have {number_of_texts} texts to be analyzed")
 print(separator)
+
 #choosing the text by integer input
 input_choosing_text = int(input("Enter a number between 1 and 3 to select: "))
+
 #making sure the entered number logically corresponds to the list
 input_choosing_text -= 1
 
@@ -68,24 +73,28 @@ for word in TEXTS[input_choosing_text].split():
 number_of_words = len(clean_words)
 print(separator)
 print(f"There are {number_of_words} words in the selected text")
+
 #list of titlecase words
 number_of_titlecase_words = []
 for word in clean_words:
     if word.istitle():
         number_of_titlecase_words.append(word)
 print(f"There are {len(number_of_titlecase_words)} titlecase words")
+
 #list of uppercase words
 number_of_uppercase_words = []
 for word in clean_words:
     if word.isupper():
         number_of_uppercase_words.append(word)
 print(f"There are {len(number_of_uppercase_words)} uppercase words")
+
 #list of lowercase words
 number_of_lowercase_words = []
 for word in clean_words:
     if word.islower():
         number_of_lowercase_words.append(word)
 print(f"There are {len(number_of_lowercase_words)} lowercase words")
+
 #list of the sum of all the numbers
 sum_of_all_numbers = []
 for word in clean_words:
@@ -103,6 +112,7 @@ word_lengths = {}
 #iterate over each word in clean_words
 for word in clean_words:
     length = len(word)
+
 #increase the count for the current word length
     word_lengths[length] = word_lengths.get(length, 0) + 1
 
